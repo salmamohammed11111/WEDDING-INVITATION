@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation</title>
+
+https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap
+
+<style>
+
+:root{
+    --primary:#d4af37;
+    --secondary:#144709d9;
+    --dark:#333;
+    --gold:#d4af37;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:var(--dark);
+    background:var(--secondary);
+}
+
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+h1,h2{
+    font-family:'Playfair Display',serif;
+}
+
+/* Hero */
+
+.hero{
+    height:100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.35),
+        rgba(0,0,0,0.35)),
+        url('images/hero.jpg') center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:1.3rem;
+}
+
+/* Countdown */
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.box{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    min-width:120px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.box h3{
+    color:var(--primary);
+    font-size:2rem;
+}
+
+/* Story */
+
+.story{
+    text-align:center;
+}
+
+.story p{
+    max-width:800px;
+    margin:20px auto;
+    line-height:1.8;
+}
+
+/* Event */
+
+.event-card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+/* Gallery */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery-grid img{
+    width:100%;
+    max-width:700px;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.04);
+}
+
+/* RSVP */
+
+.rsvp{
+    text-align:center;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:var(--primary);
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    margin-top:20px;
+}
+
+.btn:hover{
+    background:#9d5964;
+}
+
+.footer{
+    padding:30px;
+    text-align:center;
+}
+
+.pattern{
+    height:120px;
+    background:
+    repeating-linear-gradient(
+        45deg,
+        rgba(183,110,121,.12),
+        rgba(183,110,121,.12) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:2.5rem;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>AMIRA & AMIR</h1>
+        <p>We're Getting Married</p>
+        <p>OCTOBER 09, 2026</p>
+
+        <div class="countdown">
+
+            <div class="box">
+                <h3 id="days">0</h3>
+                <span>Days</span>
+            </div>
+
+            <div class="box">
+                <h3 id="hours">0</h3>
+                <span>Hours</span>
+            </div>
+
+            <div class="box">
+                <h3 id="minutes">0</h3>
+                <span>Minutes</span>
+            </div>
+
+            <div class="box">
+                <h3 id="seconds">0</h3>
+                <span>Seconds</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="pattern"></div>
+
+<!-- STORY -->
+<section class="story">
+    <div class="container">
+        <h2>Our Story</h2>
+
+        <p>
+            We met, became friends, fell in love,
+            and now we're excited to celebrate our
+            special day with all of you.
+        </p>
+    </div>
+</section>
+
+<!-- EVENT -->
+<section>
+    <div class="container">
+        <div class="event-card">
+            <h2>Wedding Details</h2>
+
+            <br>
+
+            <p><strong>Date:</strong> October 9, 2026</p>
+            <p><strong>Time:</strong> 7:00 PM</p>
+            <p><strong>Venue:</strong> EL BARON WEDDING HALL</p>
+            <p><strong>City:</strong> Cairo, Egypt</p>
+
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+<div class="container">
+    <h2 style="text-align:center;margin-bottom:40px;">
+        Gallery
+    </h2>
+
+    <div class="gallery-grid">
+        <img src="a4840919-3279-4573-aa0d-be2af85a87e5.jpg" alt="Wedding Photo">
+    </div>
+
+</div>
+    </div>
+</section>
+
+<!-- RSVP -->
+<section class="rsvp">
+    <div class="container">
+
+        <h2>Join Us</h2>
+
+        <p>
+            We would love to celebrate together.
+        </p>
+
+        <a href="https://maps.app.goo.gl/jdtNoT54uqoTmSZp8" class="btn" target="_blank">
+           LOCATION
+        </a>
+
+    </div>
+</section>
+
+<div class="pattern"></div>
+
+<footer class="footer">
+    AMIRA & AMIR • 2026
+</footer>
+
+<script>
+
+const weddingDate = new Date(
+    "October 9, 2026 19:00:00"
+).getTime();
+
+setInterval(()=>{
+
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    const days =
+      Math.floor(distance/(1000*60*60*24));
+
+    const hours =
+      Math.floor((distance%(1000*60*60*24))
+      /(1000*60*60));
+
+    const minutes =
+      Math.floor((distance%(1000*60*60))
+      /(1000*60));
+
+    const seconds =
+      Math.floor((distance%(1000*60))
+      /1000);
+
+    document.getElementById('days').innerText=days;
+    document.getElementById('hours').innerText=hours;
+    document.getElementById('minutes').innerText=minutes;
+    document.getElementById('seconds').innerText=seconds;
+
+},1000);
+
+</script>
+
+</body>
+</html>
